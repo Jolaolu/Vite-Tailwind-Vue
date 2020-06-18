@@ -2,14 +2,16 @@
   "name": "testing-vite",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "style": "tailwindcss build src/index.css -o src/tailwind.css",
+    "dev": "yarn style && vite",
+    "build": "yarn style && vite build"
   },
   "dependencies": {
+    "tailwindcss": "^1.4.6",
     "vue": "^3.0.0-beta.14"
   },
   "devDependencies": {
-    "vite": "^0.20.0",
-    "@vue/compiler-sfc": "^3.0.0-beta.14"
+    "@vue/compiler-sfc": "^3.0.0-beta.14",
+    "vite": "^0.20.0"
   }
 }
